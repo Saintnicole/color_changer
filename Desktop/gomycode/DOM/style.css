@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: rgb(181, 251, 227);
+}
+.container h1{
+    font-size: 40px;
+    color: #110a2d;
+    font-weight: bold;
+}
+
+#color-box{
+    width: 300px;
+    height: 250px;
+    background-color: rgb(11, 8, 33);
+}
+
+#change-color-btn {
+    margin: 30px 20px;
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(95deg,  #110a2d, #41f5c2);
+    color: rgb(210, 241, 231);
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-size: 200% 200%; /* allows gradient to move */
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 10px rgba(46, 27, 133, 0.4);
+}
+
+/* Animation effect */
+#change-color-btn:hover {
+    background-position: right center; /* animate gradient */
+    box-shadow: 0 0 20px rgba(46, 27, 133, 0.8), 0 0 40px rgba(26, 11, 80, 0.6);
+    transform: scale(1.05);
+}
