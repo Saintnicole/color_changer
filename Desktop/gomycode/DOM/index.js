@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-let colorBox = document.getElementById("color-box");
+let colorBox = document.getElementById("color-box"); //selecting the color box and storing it as a variable
 let colorBtn = document.getElementById("change-color-btn");
+
+//function to get random color to change background color
 
 colorBtn.addEventListener("click", function() {
     colorBox.style.backgroundColor = getRandomColor();
