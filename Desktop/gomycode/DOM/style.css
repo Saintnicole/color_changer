@@ -1,47 +1,77 @@
-*{
+/* 
+  Reset default browser styles: 
+  Removes all default margins and paddings from elements 
+  to create a clean, consistent starting point.
+*/
+* {
     margin: 0;
     padding: 0;
 }
 
-.container{
-    margin: 20px 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    background-color: rgb(181, 251, 227);
-}
-.container h1{
-    font-size: 40px;
-    color: #110a2d;
-    font-weight: bold;
-}
-
-#color-box{
-    width: 300px;
-    height: 250px;
-    background-color: rgb(11, 8, 33);
+/* 
+  Main container styling: 
+  Centers content vertically and horizontally 
+  and gives the section a soft green background.
+*/
+.container {
+    margin: 20px 35px;                 /* Adds outer spacing around the container */
+    display: flex;                     /* Enables flexbox layout */
+    flex-direction: column;            /* Aligns items vertically */
+    justify-content: center;           /* Centers items along the vertical axis */
+    align-items: center;               /* Centers items along the horizontal axis */
+    height: 500px;                     /* Sets container height */
+    background-color: rgb(181, 251, 227); /* Light mint background color */
 }
 
+/* 
+  Heading (h1) inside the container:
+  Gives the title bold, large text in dark blue.
+*/
+.container h1 {
+    font-size: 40px;                   /* Increases text size */
+    color: #110a2d;                    /* Dark navy text color */
+    font-weight: bold;                 /* Makes the text bold */
+}
+
+/* 
+  The color display box:
+  Represents an area that changes or shows color.
+*/
+#color-box {
+    width: 300px;                      /* Box width */
+    height: 250px;                     /* Box height */
+    background-color: rgb(11, 8, 33);  /* Dark blue default background */
+}
+
+/* 
+  Button styling:
+  Adds a gradient background, rounded corners, 
+  and smooth transition effects for animation.
+*/
 #change-color-btn {
-    margin: 30px 20px;
-    width: 150px;
-    height: 40px;
-    background: linear-gradient(95deg,  #110a2d, #41f5c2);
-    color: rgb(210, 241, 231);
-    font-size: 15px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background-size: 200% 200%; /* allows gradient to move */
-    transition: all 0.4s ease-in-out;
-    box-shadow: 0 0 10px rgba(46, 27, 133, 0.4);
+    margin: 30px 20px;                 /* Adds space around the button */
+    width: 150px;                      /* Button width */
+    height: 40px;                      /* Button height */
+    background: linear-gradient(95deg, #110a2d, #41f5c2); /* Gradient color from dark blue to aqua */
+    color: rgb(210, 241, 231);         /* Light text color */
+    font-size: 15px;                   /* Font size for button text */
+    border-radius: 20px;               /* Rounded corners */
+    border: none;                      /* Removes default border */
+    cursor: pointer;                   /* Shows pointer on hover */
+    background-size: 200% 200%;        /* Makes gradient large enough to animate */
+    transition: all 0.4s ease-in-out;  /* Smooth transition for hover effects */
+    box-shadow: 0 0 10px rgba(46, 27, 133, 0.4); /* Soft glow effect around button */
 }
 
-/* Animation effect */
+/* 
+  Hover animation for the button:
+  Creates a glowing neon-like animation with movement and scale.
+*/
 #change-color-btn:hover {
-    background-position: right center; /* animate gradient */
-    box-shadow: 0 0 20px rgba(46, 27, 133, 0.8), 0 0 40px rgba(26, 11, 80, 0.6);
-    transform: scale(1.05);
+    background-position: right center; /* Moves gradient background to create animation effect */
+    box-shadow: 
+        0 0 20px rgba(46, 27, 133, 0.8),  /* Stronger glow on hover */
+        0 0 40px rgba(26, 11, 80, 0.6);   /* Outer glow for layered effect */
+    transform: scale(1.05);              /* Slightly enlarges button for emphasis */
 }
+
